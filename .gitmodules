@@ -1,0 +1,9 @@
+[submodule "akari-dev"]
+	path = akari-dev
+	url = https://github.com/kagurasumusun/akari-dev.git
+	branch = re-start
+
+[submodule "wince-docs-corpus"]
+	path = wince-docs-corpus
+	url = https://github.com/kagurasumusun/wince-docs-corpus.git
+	branch = main
