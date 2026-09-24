@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Retrieval plan",
+  "type": "object",
+  "required": ["task_id", "token_budget", "candidate_structures", "selected_structures", "completeness_target"],
+  "properties": {
+    "task_id": {"type": "string"},
+    "token_budget": {"type": "integer", "minimum": 0},
+    "candidate_structures": {"type": "array", "items": {"type": "string"}},
+    "selected_structures": {"type": "array", "items": {"type": "string"}},
+    "excluded_structures": {"type": "array", "items": {"type": "string"}},
+    "completeness_target": {"type": "string"},
+    "rationale": {"type": "string"}
+  },
+  "additionalProperties": false
+}

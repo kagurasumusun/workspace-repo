@@ -1,0 +1,19 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Agent guardrail proposal",
+  "type":"object",
+  "required":["proposal_id","trigger","scope","evidence_refs","verification","status"],
+  "properties":{
+    "proposal_id":{"type":"string"},
+    "trigger":{"type":"string"},
+    "action":{"type":"string"},
+    "scope":{"type":"string"},
+    "evidence_refs":{"type":"array","items":{"type":"string"}},
+    "hard_negative_results":{"type":"array","items":{"type":"object"}},
+    "verification":{"type":"string"},
+    "rollback":{"type":"string"},
+    "status":{"enum":["candidate","staged","verified","promoted","rejected","deprecated"]},
+    "version":{"type":"string"}
+  },
+  "additionalProperties":true
+}

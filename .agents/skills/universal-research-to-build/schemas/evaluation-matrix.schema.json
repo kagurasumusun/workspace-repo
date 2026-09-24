@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Skill Evaluation Matrix Cell",
+  "type": "object",
+  "required": ["task_set", "variant", "metrics"],
+  "properties": {
+    "task_set": {"type": "string"},
+    "variant": {"type": "string", "enum": ["baseline", "skill", "candidate_patch", "rollback"]},
+    "model": {"type": ["string", "null"]},
+    "host": {"type": ["string", "null"]},
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "success": {"type": ["number", "null"]},
+        "efficiency": {"type": ["number", "null"]},
+        "safety": {"type": ["number", "null"]},
+        "generalization": {"type": ["number", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "regressions": {"type": "array", "items": {"type": "string"}},
+    "held_out": {"type": "boolean"},
+    "replay": {"type": "boolean"}
+  },
+  "additionalProperties": false
+}

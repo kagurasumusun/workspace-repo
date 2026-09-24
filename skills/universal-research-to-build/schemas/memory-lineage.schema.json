@@ -1,0 +1,18 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Memory lineage record",
+  "type":"object",
+  "required":["memory_id","source_ids","derivations","status"],
+  "properties":{
+    "memory_id":{"type":"string"},
+    "source_ids":{"type":"array","items":{"type":"string"}},
+    "derivations":{"type":"array","items":{"type":"object","required":["from","to"],"properties":{"from":{"type":"string"},"to":{"type":"string"},"transformation":{"type":"string"},"policy_refs":{"type":"array","items":{"type":"string"}}}}},
+    "audience_scope":{"type":"string"},
+    "policy_refs":{"type":"array","items":{"type":"string"}},
+    "reviewed_at":{"type":"string"},
+    "status":{"enum":["authorized","authorized_with_conditions","unknown","restricted","blocked","expired"]},
+    "owner":{"type":"string"},
+    "version":{"type":"string"}
+  },
+  "additionalProperties":true
+}

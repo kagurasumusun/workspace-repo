@@ -1,0 +1,25 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "type":"object",
+  "required":["source_id","locator","retrieved_at","status"],
+  "properties":{
+    "source_id":{"type":"string"},
+    "source_kind":{"type":"string"},
+    "locator":{"type":"string"},
+    "retrieved_at":{"type":"string"},
+    "observed_version":{"type":"string"},
+    "content_hash":{"type":"string"},
+    "authority":{"type":"string"},
+    "reliability":{"type":"string"},
+    "independence":{"type":"string"},
+    "freshness":{"type":"string"},
+    "directness":{"type":"string"},
+    "applicability":{"type":"string"},
+    "usefulness":{"type":"string"},
+    "rights_status":{"type":"string"},
+    "extraction_method":{"type":"string"},
+    "observed_or_inferred":{"type":"string"},
+    "status":{"type":"string"}
+  },
+  "additionalProperties":true
+}

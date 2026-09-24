@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Multi-agent independence record",
+  "type": "object",
+  "required": ["trajectory_id", "agent_id", "source_ids", "query_families", "independence_class"],
+  "properties": {
+    "trajectory_id": {"type": "string"},
+    "agent_id": {"type": "string"},
+    "model_family": {"type": "string"},
+    "source_ids": {"type": "array", "items": {"type": "string"}},
+    "query_families": {"type": "array", "items": {"type": "string"}},
+    "intermediate_dependencies": {"type": "array", "items": {"type": "string"}},
+    "verification_path": {"type": "array", "items": {"type": "string"}},
+    "independence_class": {"enum": ["independent", "partial", "common_mode", "unresolved"]}
+  },
+  "additionalProperties": false
+}

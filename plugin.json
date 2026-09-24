@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "universal-research-to-build",
+  "version": "15.0.0",
+  "description": "Evidence-driven research, heterogeneous extraction, build-surface reconstruction, compatibility, provenance, long-horizon execution, and lightweight automatic Skill routing with applicability-aware abstention.",
+  "keywords": [
+    "research",
+    "deep-research",
+    "agent-skill",
+    "provenance",
+    "build-surface",
+    "reverse-engineering",
+    "compatibility",
+    "long-horizon",
+    "multi-agent",
+    "memory-evolution",
+    "host-interoperability",
+    "authorization-continuity",
+    "skill-routing",
+    "skill-discovery",
+    "abstention"
+  ]
+}

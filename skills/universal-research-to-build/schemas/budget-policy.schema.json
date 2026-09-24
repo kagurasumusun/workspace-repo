@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Budget Policy",
+  "type": "object",
+  "properties": {
+    "context_tokens": {"type": ["integer", "null"], "minimum": 0},
+    "tool_calls": {"type": ["integer", "null"], "minimum": 0},
+    "latency_seconds": {"type": ["number", "null"], "minimum": 0},
+    "external_side_effects": {"type": "string", "enum": ["none", "reversible_only", "bounded", "review_required"]},
+    "artifact_churn": {"type": "string", "enum": ["low", "bounded", "review_required"]},
+    "rollback": {"type": "string", "enum": ["required", "preferred", "not_available"]}
+  },
+  "additionalProperties": false
+}

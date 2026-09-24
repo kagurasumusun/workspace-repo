@@ -1,0 +1,19 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "type":"object",
+  "required":["proposal_id","memory_class","status","evidence_ids","verification"],
+  "properties":{
+    "proposal_id":{"type":"string"},
+    "memory_class":{"type":"string"},
+    "source_trajectory_ids":{"type":"array","items":{"type":"string"}},
+    "evidence_ids":{"type":"array","items":{"type":"string"}},
+    "attribution":{"type":"string"},
+    "applicability":{"type":"array"},
+    "counterexamples":{"type":"array"},
+    "verification":{"type":"object"},
+    "status":{"type":"string"},
+    "supersedes":{"type":"string"},
+    "rejected_reason":{"type":"string"}
+  },
+  "additionalProperties":true
+}

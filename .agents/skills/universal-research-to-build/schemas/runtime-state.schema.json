@@ -1,0 +1,32 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "type":"object",
+  "required":["goal","task_contract","completion_status"],
+  "properties":{
+    "goal":{"type":"string"},
+    "task_contract":{"type":"object"},
+    "task_state":{"type":"object"},
+    "phase_state":{"type":"object"},
+    "run_state":{"type":"object"},
+    "tick_state":{"type":"object"},
+    "state_version":{"type":"string"},
+    "state_hash":{"type":"string"},
+    "current_plan":{"type":"object"},
+    "active_route":{"type":"string"},
+    "completed_routes":{"type":"array"},
+    "failed_routes":{"type":"array"},
+    "rejected_routes":{"type":"array"},
+    "belief_state":{"type":"array"},
+    "hypotheses":{"type":"array"},
+    "active_branches":{"type":"array"},
+    "coverage":{"type":"object"},
+    "evidence_index":{"type":"array"},
+    "open_questions":{"type":"array"},
+    "assumptions":{"type":"array"},
+    "memory_writes":{"type":"array"},
+    "escalations":{"type":"array"},
+    "verification_status":{"type":"string"},
+    "completion_status":{"type":"string"}
+  },
+  "additionalProperties":true
+}

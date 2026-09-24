@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Skill behavioral evaluation",
+  "type": "object",
+  "required": ["suite_version", "task_id", "variant", "status", "checks"],
+  "properties": {
+    "suite_version": {"type": "string"},
+    "task_id": {"type": "string"},
+    "variant": {"enum": ["baseline", "skill", "candidate"]},
+    "status": {"enum": ["pass", "fail", "partial", "blocked"]},
+    "invoked_skill": {"type": "boolean"},
+    "checks": {"type": "array", "items": {"type": "string"}},
+    "evidence_ids": {"type": "array", "items": {"type": "string"}},
+    "artifact_paths": {"type": "array", "items": {"type": "string"}},
+    "cost": {"type": "number", "minimum": 0},
+    "duration_seconds": {"type": "number", "minimum": 0},
+    "regressions": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

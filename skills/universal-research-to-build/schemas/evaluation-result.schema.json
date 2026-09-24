@@ -1,0 +1,20 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "type":"object",
+  "required":["evaluation_id","subject","status"],
+  "properties":{
+    "evaluation_id":{"type":"string"},
+    "subject":{"type":"string"},
+    "suite_version":{"type":"string"},
+    "status":{"type":"string"},
+    "metrics":{"type":"object"},
+    "hard_negatives":{"type":"array"},
+    "held_out":{"type":"boolean"},
+    "replay":{"type":"boolean"},
+    "evidence_ids":{"type":"array","items":{"type":"string"}},
+    "failures":{"type":"array"},
+    "regressions":{"type":"array"},
+    "promotion_decision":{"type":"string"}
+  },
+  "additionalProperties":true
+}

@@ -1,0 +1,21 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "type":"object",
+  "required":["branch_id","task_id","hypothesis","budget","status"],
+  "properties":{
+    "branch_id":{"type":"string","minLength":1},
+    "task_id":{"type":"string","minLength":1},
+    "hypothesis":{"type":"string","minLength":1},
+    "basis_evidence_ids":{"type":"array","items":{"type":"string"}},
+    "budget":{"type":"object"},
+    "actions":{"type":"array"},
+    "evidence_ids":{"type":"array","items":{"type":"string"}},
+    "supporting_findings":{"type":"array"},
+    "contradicting_findings":{"type":"array"},
+    "unresolved_questions":{"type":"array"},
+    "direction_switches":{"type":"array"},
+    "status":{"type":"string"},
+    "conclusion":{"type":"string"}
+  },
+  "additionalProperties":true
+}

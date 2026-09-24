@@ -1,0 +1,25 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "type":"object",
+  "required":["route_id","hypothesis","status"],
+  "properties":{
+    "route_id":{"type":"string"},
+    "task_id":{"type":"string"},
+    "branch_id":{"type":"string"},
+    "hypothesis":{"type":"string"},
+    "scope_boundary":{"type":"string"},
+    "actions":{"type":"array"},
+    "evidence_ids":{"type":"array","items":{"type":"string"}},
+    "negative_findings":{"type":"array"},
+    "assumptions":{"type":"array"},
+    "failures":{"type":"array"},
+    "unresolved_questions":{"type":"array"},
+    "direction_switches":{"type":"array"},
+    "planning_outcome":{"type":"string"},
+    "execution_outcome":{"type":"string"},
+    "attribution":{"type":"string"},
+    "next_falsification":{"type":"string"},
+    "status":{"type":"string"}
+  },
+  "additionalProperties":true
+}

@@ -1,0 +1,63 @@
+{
+  "skills": [
+    {
+      "name": "universal-research-to-build",
+      "description": "Evidence-driven research, heterogeneous extraction, build-surface reconstruction, compatibility, provenance, and long-horizon implementation.",
+      "keywords": [
+        "research",
+        "deep research",
+        "evidence",
+        "provenance",
+        "api",
+        "schema",
+        "abi",
+        "compatibility",
+        "reverse engineering",
+        "extraction",
+        "build surface",
+        "long horizon"
+      ],
+      "excludes": [
+        "trivial typo",
+        "simple formatting",
+        "one-line factual answer"
+      ],
+      "priority": 50
+    },
+    {
+      "name": "skill-router",
+      "description": "Select the smallest useful set of installed Skills and abstain when Skill activation is unnecessary or harmful.",
+      "keywords": [
+        "route",
+        "skill selection",
+        "skill discovery",
+        "automatic routing",
+        "applicability"
+      ],
+      "excludes": [],
+      "priority": 100
+    },
+    {
+      "name": "wince-docs-corpus",
+      "description": "Exhaustive Windows CE research, corpus construction, historical/API/ABI/toolchain evidence, provenance and coverage audits.",
+      "when": [
+        "wince research",
+        "WinCE API documentation",
+        "WinCE history",
+        "ABI evidence",
+        "corpus coverage"
+      ]
+    },
+    {
+      "name": "wince-devkit",
+      "description": "Implement the narrow Akari WinCE developer kit surface: include headers, .def/export surfaces, link metadata, and program startup code. Not SDK/BSP/OAK/OS reimplementation.",
+      "when": [
+        "WinCE headers",
+        "WinCE .def",
+        "WinCE exports",
+        "WinCE startup",
+        "Akari developer kit"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "type":"object",
+  "required":["surface_version","packages"],
+  "properties":{
+    "surface_version":{"type":"string"},
+    "packages":{"type":"array","items":{"type":"object"}},
+    "provenance":{"type":"array","items":{"type":"object"}},
+    "compatibility":{"type":"array","items":{"type":"object"}},
+    "unsupported":{"type":"array","items":{"type":"object"}},
+    "verification":{"type":"array","items":{"type":"object"}}
+  },
+  "additionalProperties":true
+}

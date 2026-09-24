@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Trajectory attribution record",
+  "type": "object",
+  "required": ["outcome_id", "attribution", "evidence_ids"],
+  "properties": {
+    "outcome_id": {"type": "string"},
+    "attribution": {"enum": ["task_state", "plan", "execution", "environment", "memory", "coordination", "both", "neither_or_unknown"]},
+    "evidence_ids": {"type": "array", "items": {"type": "string"}},
+    "confounders": {"type": "array", "items": {"type": "string"}},
+    "confidence": {"type": "string"},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}

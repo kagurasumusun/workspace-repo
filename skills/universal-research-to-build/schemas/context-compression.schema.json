@@ -1,0 +1,17 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Reversible context compression record",
+  "type":"object",
+  "required":["compression_id","source_ref","placeholder_ref","reversible","created_at"],
+  "properties":{
+    "compression_id":{"type":"string"},
+    "source_ref":{"type":"string"},
+    "placeholder_ref":{"type":"string"},
+    "source_coordinates":{"type":"array","items":{"type":"string"}},
+    "reversible":{"const":true},
+    "reason":{"type":"string"},
+    "created_at":{"type":"string"},
+    "restored_at":{"type":["string","null"]}
+  },
+  "additionalProperties":true
+}
