@@ -150,6 +150,42 @@ Before materially expensive or irreversible work, establish configurable budgets
 
 ## 10. Long-horizon execution
 
+### 10.1 Persistent workspace execution contract
+
+For repository tasks, the workspace durable state is part of the execution environment. When `.agent/` exists, read its active state before substantial work and update it during execution.
+
+At minimum preserve:
+
+- current task contract;
+- complete deliverable/milestone ledger;
+- current status and next action;
+- decisions and rejected alternatives;
+- evidence and evidence gaps;
+- completion-gate result.
+
+Do not infer task completion from the last successful edit. Resume from the first unfinished mandatory milestone after interruption or context reset.
+
+A Skill completing its local operation returns control to the parent task. It must not terminate the parent task unless the global completion gate passes.
+
+### 10.2 Continue-until-gate rule
+
+For substantive work, the execution loop is:
+
+`load state → inspect remaining deliverables → execute next milestone → verify → persist state → coverage audit → repeat`
+
+If mandatory deliverables remain, continue. If a route produces only a partial artifact, record it as partial progress and continue to the next required item.
+
+The final response is not a completion signal. Completion requires the durable completion gate to pass.
+
+### 10.3 Milestone integrity
+
+Every milestone must have acceptance criteria and a verification method. Mark it `verified` only after the criteria are actually checked. A representative example does not satisfy an exhaustive deliverable unless the plan explicitly defines sampling as the acceptance criterion.
+
+### 10.4 Recovery
+
+When a milestone fails, classify the failure, record it, repair or choose a materially different strategy, and re-verify before advancing. Do not repeatedly perform the same failing action merely to make progress appear continuous.
+
+
 Use durable structured runtime state, not transcript replay, as the system of record.
 
 Core loop:
