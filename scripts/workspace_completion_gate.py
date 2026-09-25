@@ -12,7 +12,7 @@ STATE = ROOT / ".agent"
 REQUIRED = [
     "TASK.md", "SCOPE.md", "PLAN.md", "STATUS.md", "DECISIONS.md",
     "EVIDENCE.md", "UNIVERSE.md", "COVERAGE.md", "GAPS.md",
-    "CONVERGENCE.md", "COMPLETION.md", "IMPLEMENT.md",
+    "CONVERGENCE.md", "COMPLETION.md", "IMPLEMENT.md", "SKILL-LOG.md",
 ]
 PLAN_ALLOWED = {"verified", "blocked", "not_applicable"}
 CLASSIFICATIONS = {
@@ -49,6 +49,7 @@ def main() -> int:
     universe = (STATE / "UNIVERSE.md").read_text(encoding="utf-8")
     gaps = (STATE / "GAPS.md").read_text(encoding="utf-8")
     convergence = (STATE / "CONVERGENCE.md").read_text(encoding="utf-8")
+    skill_log = (STATE / "SKILL-LOG.md").read_text(encoding="utf-8")
 
     if "status: no_active_task" in plan:
         return fail("no active task")
@@ -65,6 +66,9 @@ def main() -> int:
             unfinished.append(f"{row[0]}={row[6]}")
     if unfinished:
         return fail("mandatory plan work remains: " + ", ".join(unfinished))
+
+    if "status: NOT_STARTED" in skill_log:
+        return fail("Skill execution log shows no Skill was used")
 
     if "status: CONVERGED" not in convergence:
         return fail("CONVERGENCE.md is not CONVERGED")
