@@ -58,6 +58,7 @@ Persistent execution state:
 - .agent/CONVERGENCE.md
 - .agent/COMPLETION.md
 - .agent/IMPLEMENT.md
+- .agent/SKILL-LOG.md
 
 After a context reset, resume from these files.
 
@@ -80,7 +81,7 @@ For broad WinCE reconstruction, route and actually load:
 4. universal-research-to-build for synthesis/reconstruction;
 5. wince-devkit for implementation when its boundary applies.
 
-The exact sequence may branch when applicability changes, but merely mentioning a Skill is not Skill use.
+The exact sequence may branch when applicability changes, but merely mentioning a Skill is not Skill use. Record route, loaded SKILL.md, execution result, and evidence in .agent/SKILL-LOG.md. If the host cannot actually load a selected Skill, record that capability failure instead of claiming the Skill was used.
 
 A Skill may abstain from a subtask; that returns control to the parent task and never terminates the overall task.
 
