@@ -1,16 +1,20 @@
 # Completion Gate
 
 status: NOT_READY
+convergence: NOT_CONVERGED
 
 ## Required checks
 
 - [ ] User objective satisfied
-- [ ] Complete deliverable inventory created
-- [ ] Every mandatory plan item verified or legitimately blocked
+- [ ] Scope is explicitly defined or its remaining unknowns are shown to be non-material
+- [ ] Candidate universe discovered to defensible convergence
+- [ ] Coverage matrix updated
+- [ ] No material gap remains open unless genuinely externally blocked and documented
+- [ ] Every discovered mandatory candidate classified with rationale
+- [ ] Intended implementation candidates verified
 - [ ] Acceptance criteria checked
 - [ ] Relevant tests executed
 - [ ] Failures repaired or explicitly classified
-- [ ] Coverage audit passed
 - [ ] Evidence/provenance recorded
 - [ ] Cross-repository consistency checked
 - [ ] Scope boundaries preserved
@@ -18,6 +22,8 @@ status: NOT_READY
 
 ## Rule
 
-Do not change status to READY while a mandatory unchecked item remains.
+Do not change status to READY unless CONVERGENCE.md says CONVERGED and all mandatory checks are checked.
 
-A final response is not evidence of completion. The repository state and verification results are the evidence.
+Do not require every discovered candidate to be implemented. Require every candidate to be classified and every intended implementation candidate to be verified.
+
+Do not use an arbitrary API count, file count, search count, or representative sample as an exhaustive completion criterion.
