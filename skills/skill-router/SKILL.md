@@ -125,3 +125,20 @@ Read only:
 3. selected references/scripts only when execution requires them.
 
 Routing must remain cheap enough to run on every substantive task.
+
+## 8. Durable-work routing
+
+For substantive repository work, routing is not the end of the task. Before selecting or abstaining from a specialist Skill, inspect the workspace durable state when present:
+
+- `.agent/TASK.md`
+- `.agent/PLAN.md`
+- `.agent/STATUS.md`
+- `.agent/COMPLETION.md`
+
+If mandatory work remains in the plan, `abstain` means only "this Skill is not needed for this step"; it does **not** mean "the overall task is finished".
+
+When a task spans research → implementation → verification, prefer an ordered sequence and keep the parent task alive until the completion gate passes.
+
+Never route a large task as a single isolated artifact request merely because one artifact is an obvious first step.
+
+A routing decision must preserve the parent task's deliverable ledger and return control to the next unfinished milestone after the selected Skill completes.
