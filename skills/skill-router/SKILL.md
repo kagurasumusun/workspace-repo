@@ -92,7 +92,7 @@ For `universal-research-to-build`, route when the task includes one or more of:
 
 Abstain for isolated trivial edits, simple factual answers, ordinary formatting, or one-off tasks where the procedure would not materially improve the result.
 
-## 5. Routing output
+## 6. Routing output
 
 Keep the user-facing routing explanation short unless requested. Internally retain:
 
@@ -110,13 +110,13 @@ route:
 
 Never claim a Skill was executed when only its metadata was inspected.
 
-## 6. Host behavior
+## 7. Host behavior
 
 This Skill does not assume a host-level router API. On hosts that automatically discover Skills, its metadata is itself discoverable. On hosts without automatic discovery, the repository's `AGENTS.md`, plugin manifest, or host adapter must invoke the router procedure.
 
 Do not invent host capabilities. If the host exposes no way to inspect installed Skills, route from the Skills explicitly supplied in context and mark discovery as partial.
 
-## 7. Progressive disclosure
+## 8. Progressive disclosure
 
 Read only:
 
@@ -126,7 +126,7 @@ Read only:
 
 Routing must remain cheap enough to run on every substantive task.
 
-## 8. Durable-work routing
+## 9. Durable-work routing
 
 For substantive repository work, routing is not the end of the task. Before selecting or abstaining from a specialist Skill, inspect the workspace durable state when present:
 
